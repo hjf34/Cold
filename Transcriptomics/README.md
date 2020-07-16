@@ -1,6 +1,7 @@
 ## TRANSCRIPTOMICS ANALYSIS
 ### BamToBigwigs
-RNA samples from nuclear and cytoplasmic fractions of AC16 and U2OS cells exposed to different temperature conditions were generated into libraries using the QuantSeq 3’ mRNA-Seq Library Prep Kit for Ion Torrent (Lexogen). Libraries were sequenced using the Ion Proton Sequencer and aligned to the hg19 human genome build or a combined dm6 (*D. melanogaster*) / hg19 genome build (for *D. melanogaster* cell spiked in samples) using the TMAP aligner with alignment settings (-tmap mapall stage1 map4) to generate bam files. Bam file reads were narrowed
+RNA samples from nuclear and cytoplasmic fractions of AC16 and U2OS cells exposed to different temperature conditions were generated into libraries using the QuantSeq 3’ mRNA-Seq Library Prep Kit for Ion Torrent (Lexogen). Libraries were sequenced using the Ion Proton Sequencer and aligned to the hg19 human genome build or a combined dm6 (*D. melanogaster*) / hg19 genome build (for *D. melanogaster* cell spiked in samples) using the TMAP aligner with alignment settings (-tmap mapall stage1 map4) to generate bam files. Bam file reads were narrowed to their 3' nucleotide and converted to bigwig files using R scripts `bamfile_to_narrowed_bigwigs.R` and `bamfile_spikedin_to_narrowed_bigwigs.R`
+
 
 ### Fiji Macros
 

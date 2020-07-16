@@ -8,9 +8,12 @@ D. melanogaster PASs were obtained from the Tian lab (Liu et al, 2017) and were 
 Counts per PAS for each RNA-seq sample were obtained using bigwig files (from GEO (http://https://www.ncbi.nlm.nih.gov/geo/) under accession code GSE137003) and R scripts `coldCountTableGeneration.R` and `countTableGenerationFly.R` to give `coldCountTableRaw.Rda` and `FlyCountTableRaw1.Rda`, respectively.
 
 Raw count tables were processed to give:
-1) Counts per Genes in RefSeq data base (counts from all PASs associated with each gene are summed) `coldRefSeqGeneCountTable.Rda`
-2) Reads per million PAS-associated reads (RPM)-normalized counts per PAS `coldPasForRefSeqGeneRPMCountTable.Rda`
-3) Counts in reads per million per Genes in RefSeq data base (RPM-normalized counts from all PASs associated with each gene are summed) `coldRefSeqGeneRPMCountTable.Rda`
+1) Counts per Genes in RefSeq data base (counts from all PASs associated with each gene are summed) `coldRefSeqGeneCountTable.Rda`.
+2) Reads per million PAS-associated reads (RPM)-normalized counts per PAS `coldPasForRefSeqGeneRPMCountTable.Rda`.
+3) Counts in reads per million per Genes in RefSeq data base (RPM-normalized counts from all PASs associated with each gene are summed) `coldRefSeqGeneRPMCountTable.Rda`.
 
 ### Differential Gene Expression
-Differential gene expression between selected temperature conditions (e.g. 18d24h37d2h = 18°C for 24h, then back to 37°C for 2h) was carried out using the DESeq2 package in R (Love et al., 2014) using R script `DESeqDifferentialGeneExpressionRNAseq.R` to give the csv files stored in DESeq/DifferentialGeneExpressionGeneLists/. C or N refers to cytoplasmic or nuclear samples. 18d24h37d2h
+Differential gene expression between selected temperature conditions (e.g. 18d24h37d2h = 18°C for 24h, then back to 37°C for 2h) was carried out using the DESeq2 package in R (Love et al., 2014) using R script `DESeqDifferentialGeneExpressionRNAseq.R` to give the csv files stored in DESeq/DifferentialGeneExpressionGeneLists/. C or N refers to cytoplasmic or nuclear samples.
+
+### Additional R scripts
+Remaining scripts generate charts and statistical analyses presented in Fig. 2-3, Fig. EV2-3 and the source data file of the paper. 

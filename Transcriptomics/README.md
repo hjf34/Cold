@@ -2,6 +2,10 @@
 ### BamToBigwigs
 RNA samples from nuclear and cytoplasmic fractions of AC16 and U2OS cells exposed to different temperature conditions were generated into libraries using the QuantSeq 3’ mRNA-Seq Library Prep Kit for Ion Torrent (Lexogen). Libraries were sequenced using the Ion Proton Sequencer and aligned to the hg19 human genome build or a combined dm6 (*D. melanogaster*) / hg19 genome build (for *D. melanogaster* cell spiked in samples) using the TMAP aligner with alignment settings (-tmap mapall stage1 map4) to generate bam files. Bam file reads were narrowed to their 3' nucleotide and converted to bigwig files using R scripts `bamfile_to_narrowed_bigwigs.R` and `bamfile_spikedin_to_narrowed_bigwigs.R`
 
+### Count Table Generation and Processing
+Human polyA site (PAS) annotations were obtained from PolyA_DB 3 (http://exon.umdnj.edu/polya_db/v3) (Wang et al, 2018). Each PAS was extended 20 nt 3’ and 200 nt 5’ from the site of cleavage and those that overlapped on the same strand after extension were combined into a single PAS annotation: see GRanges object `reducedHumanPas.Rda`. Mapped reads were narrowed to their 3’ most nucleotide and those which overlapped with the extended PAS annotations were counted. Counts were then obtained for each gene by combining the counts for all PASs associated with each gene. Genes not in the RefSeq gene database were excluded.
+For libraries prepared from D. melanogaster Schneider 2 (S2) cell spiked-in samples, reads were simultaneously aligned to both human and D. melanogaster genomes by aligning to a custom combined hg19 and dm6 genome build using the TMAP aligner. D. melanogaster PASs were obtained from the Tian lab (Liu et al, 2017) and were extended, in the same way as for human PASs. Mapped reads were narrowed to their 3’ most nucleotide and those which overlapped with the extended human or D. melanogaster PAS annotations were counted. The ratio of total D. melanogaster PAS to human PAS associated reads was obtained for each sample. These were then scaled relative to each other according to the ratio at which the two cell lines were combined.
+
 
 ### Fiji Macros
 

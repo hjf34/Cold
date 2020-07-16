@@ -13,4 +13,4 @@ Raw count tables were processed to give:
 3) Counts in reads per million per Genes in RefSeq data base (RPM-normalized counts from all PASs associated with each gene are summed) `coldRefSeqGeneRPMCountTable.Rda`
 
 ### Differential Gene Expression
-Differential gene expression between selected temperature conditions (18d24h37d2h = 18°C for 24h, then back to 37°C for 2h) was carried out using the DESeq2 package in R (Love et al., 2014) using R script `DESeqDifferentialGeneExpressionRNAseq.R` to give the csv files stored in DESeq/DifferentialGeneExpressionGeneLists/. C or N refers to cytoplasmic or nuclear samples. 18d24h37d2h
+Differential gene expression between selected temperature conditions (e.g. 18d24h37d2h = 18°C for 24h, then back to 37°C for 2h) was carried out using the DESeq2 package in R (Love et al., 2014) using R script `DESeqDifferentialGeneExpressionRNAseq.R` to give the csv files stored in DESeq/DifferentialGeneExpressionGeneLists/. C or N refers to cytoplasmic or nuclear samples. 18d24h37d2h

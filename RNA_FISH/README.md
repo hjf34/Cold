@@ -1,7 +1,7 @@
 ## RNA-FISH ANALYSIS
 ### Fiji Macros
 
-Fiji macros automate the counting of the number of dots corresponding to REV-ERBα, CRY2 and TP53 transcripts in the nucleus and cytoplasm of AC16 and U2OS cells exposed to 18°C for 5h or 24h and subsequent rewarming back to 37°C for 2h from deconvolved RNA-FISH images deposited at Image Data Resource (http://idr.openmicroscopy.org) under accession number idr0089.
+Fiji macros automate the counting of the number of dots corresponding to *REV-ERBα*, *CRY2* and *TP53* transcripts in the nucleus and cytoplasm of AC16 and U2OS cells exposed to 18°C for 5h or 24h and subsequent rewarming back to 37°C for 2h from deconvolved RNA-FISH images deposited at Image Data Resource (http://idr.openmicroscopy.org) under accession number idr0089.
 
 ### R scripts
 

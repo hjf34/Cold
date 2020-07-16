@@ -9,7 +9,7 @@ Counts per PAS for each RNA-seq sample were obtained using bigwig files (from GE
 
 Raw count tables were processed to give:
 1) Counts per Genes in RefSeq data base (counts from all PASs associated with each gene are summed) `coldRefSeqGeneCountTable.Rda`
-2) Reads per million PAS-associated reads (RPM) normalized counts per PAS `coldPasForRefSeqGeneRPMCountTable.Rda`
+2) Reads per million PAS-associated reads (RPM)-normalized counts per PAS `coldPasForRefSeqGeneRPMCountTable.Rda`
 3) Counts in reads per million per Genes in RefSeq data base (RPM-normalized counts from all PASs associated with each gene are summed) `coldRefSeqGeneRPMCountTable.Rda`
 
 ### Differential Gene Expression

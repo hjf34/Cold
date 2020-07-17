@@ -7,7 +7,7 @@ Human polyA site (PAS) annotations were obtained from the Tian lab PolyA_DB 3 (h
 D. melanogaster PASs were obtained from the Tian lab (Liu et al, 2017) and were extended, in the same way as for human PASs: see GRanges object `reducedFlyPas.Rda`.
 Counts per PAS for each RNA-seq sample were obtained using bigwig files (from GEO (http://https://www.ncbi.nlm.nih.gov/geo/) under accession code GSE137003) and R scripts `coldCountTableGeneration.R` and `countTableGenerationFly.R` to give `coldCountTableRaw.Rda` and `FlyCountTableRaw1.Rda`, respectively.
 
-Raw count tables were processed to give:
+Raw count tables were processed using R script `coldCountTableProcessor.R` to give:
 1) Counts per Genes in RefSeq data base (counts from all PASs associated with each gene are summed) `coldRefSeqGeneCountTable.Rda`.
 2) Reads per million PAS-associated reads (RPM)-normalized counts per PAS `coldPasForRefSeqGeneRPMCountTable.Rda`.
 3) Counts in reads per million per Genes in RefSeq data base (RPM-normalized counts from all PASs associated with each gene are summed) `coldRefSeqGeneRPMCountTable.Rda`.

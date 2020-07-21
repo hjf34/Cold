@@ -14,5 +14,5 @@ library(rtracklayer)
 library(scales)
 ```
 
-R version 3.6.0
+R version 3.6.0  
 Fiji version 1.0

@@ -5,7 +5,7 @@ RNA samples from nuclear and cytoplasmic fractions of AC16 and U2OS cells expose
 ### Count Table Generation and Processing
 Human polyA site (PAS) annotations were obtained from the Tian lab PolyA_DB 3 (http://exon.umdnj.edu/polya_db/v3) (Wang et al, 2018). Each PAS was extended 20 nt 3’ and 200 nt 5’ from the site of cleavage and those that overlapped on the same strand after extension were combined into a single PAS annotation: see GRanges object `reducedHumanPas.Rda`. 
 D. melanogaster PASs were obtained from the Tian lab (Liu et al, 2017) and were extended, in the same way as for human PASs: see GRanges object `reducedFlyPas.Rda`.
-Counts per PAS for each RNA-seq sample were obtained using bigwig files (from GEO (http://https://www.ncbi.nlm.nih.gov/geo/) under accession code GSE137003) and R scripts `coldCountTableGeneration.R` and `countTableGenerationFly.R` to give `coldCountTableRaw.Rda` and `FlyCountTableRaw1.Rda`, respectively.
+Counts per PAS for each RNA-seq sample were obtained using bigwig files (from GEO (http://www.ncbi.nlm.nih.gov/geo/) under accession code GSE137003) and R scripts `coldCountTableGeneration.R` and `countTableGenerationFly.R` to give `coldCountTableRaw.Rda` and `FlyCountTableRaw1.Rda`, respectively.
 
 Raw count tables were processed using R script `coldCountTableProcessor.R` to give:
 1) Counts per Genes in RefSeq data base (counts from all PASs associated with each gene are combined) `coldRefSeqGeneCountTable.Rda`.
